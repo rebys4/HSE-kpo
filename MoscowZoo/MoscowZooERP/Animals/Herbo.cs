@@ -9,13 +9,7 @@ public abstract class Herbo : Animal
         Kindness = kidness;
     }
     
-    public bool CanContact()
-    {
-        return Kindness > 5;
-    }
+    public bool CanContact() =>  Kindness > 5;
 
-    public override string ToString()
-    {
-        return base.ToString() + $", Доброта: {Kindness}";
-    }
+    public override string ToString() => base.ToString() + $", Доброта: {Kindness}";
 }

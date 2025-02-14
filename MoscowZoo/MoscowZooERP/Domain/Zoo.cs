@@ -12,8 +12,8 @@ namespace MoscowZooERP.Domain
     /// </summary>
     public class Zoo
     {
-        private List<Animal> _animals = new List<Animal>();
-        private List<Thing> _things = new List<Thing>();
+        private readonly List<Animal> _animals = new List<Animal>();
+        private readonly List<Thing> _things = new List<Thing>();
 
         public IReadOnlyList<Animal> Animals => _animals;
         public IReadOnlyList<Thing> Things => _things;

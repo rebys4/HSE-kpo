@@ -144,7 +144,7 @@ namespace ZooERP
             Console.WriteLine("Животные, подходящие для контактного зоопарка:");
             foreach (var animal in contactAnimals)
             {
-                Console.WriteLine($"- {animal.Name} (Inv #{animal.Number}), Уровень доброты: {animal.Kindness}");
+                Console.WriteLine($"- {animal.Name}, Инвентарный номер: {animal.Number}, Уровень доброты: {animal.Kindness}");
             }
         }
 
@@ -158,11 +158,11 @@ namespace ZooERP
             {
                 if (item is Animal animal)
                 {
-                    Console.WriteLine($"Животное: {animal.Name} (Inv #{animal.Number})");
+                    Console.WriteLine($"Животное: {animal.Name}, Инвентарный номер: {animal.Number}");
                 }
                 else if (item is Thing thing)
                 {
-                    Console.WriteLine($"Вещь: {thing.Name} (Inv #{thing.Number})");
+                    Console.WriteLine($"Вещь: {thing.Name}, Инвентарный номер: {thing.Number}");
                 }
             }
         }

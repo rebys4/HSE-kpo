@@ -9,7 +9,7 @@ namespace MoscowZooERP.Animals
         public int Food { get; set; }
         public int Number { get; set; }
 
-        public Animal(string name, int food)
+        protected Animal(string name, int food)
         {
             Number = InventoryNumberGenerator.GetNextNumber();
             Name = name;
