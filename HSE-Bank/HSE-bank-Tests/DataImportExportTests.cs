@@ -7,7 +7,7 @@ using Newtonsoft.Json.Linq;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
-namespace FinanceApp.Tests
+namespace HSE_Bank.Tests
 {
     [TestFixture]
     public class ExportImportTests
