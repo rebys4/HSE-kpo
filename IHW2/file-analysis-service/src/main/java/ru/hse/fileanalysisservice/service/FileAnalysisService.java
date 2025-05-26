@@ -26,7 +26,6 @@ public class FileAnalysisService {
     private String fileStoringUrl;
 
     public FileAnalysisResult analyzeFile(Long fileId) {
-        // 1. Получаем файл по id с file-storing-service
         String fileUrl = fileStoringUrl + "/files/" + fileId;
         Resource resource = restTemplate.getForObject(fileUrl, Resource.class);
 
@@ -40,17 +39,14 @@ public class FileAnalysisService {
             throw new RuntimeException("Failed to read file from storing service", e);
         }
 
-        // 2. Считаем статистику
         int paragraphs = content.split("(\\r?\\n){2,}").length;
         int words = Arrays.stream(content.split("\\s+")).filter(s -> !s.isBlank()).toArray().length;
         int chars = content.length();
 
-        // 3. Собираем частотный словарь для word cloud
         Map<String, Integer> freq = new HashMap<>();
         for (String word : content.toLowerCase().replaceAll("[^a-zA-Zа-яА-Я0-9\\s]", "").split("\\s+")) {
             if (!word.isBlank()) freq.put(word, freq.getOrDefault(word, 0) + 1);
         }
-        // 4. Формируем url для word cloud
         String wordsParam = freq.entrySet().stream()
                 .sorted((a, b) -> -Integer.compare(a.getValue(), b.getValue()))
                 .limit(50)
@@ -60,7 +56,6 @@ public class FileAnalysisService {
         String wordCloudUrl = "https://quickchart.io/wordcloud?width=600&height=400&fontScale=15&scale=log&text=" +
                 wordsParam.replace(":", "%20").replace(",", "%20");
 
-        // 5. Сохраняем результат
         FileAnalysisResult result = FileAnalysisResult.builder()
                 .fileId(fileId)
                 .fileName(fileName)
