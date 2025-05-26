@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "sFCcvH7Jkqw=",
+  "success": true,
+  "projectFilePath": "/Users/Mi/КПО/MoscowZoo/MoscowZooERP/MoscowZooERP.csproj",
+  "expectedPackageFiles": [
+    "/Users/Mi/.nuget/packages/microsoft.extensions.dependencyinjection/9.0.1/microsoft.extensions.dependencyinjection.9.0.1.nupkg.sha512",
+    "/Users/Mi/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.1/microsoft.extensions.dependencyinjection.abstractions.9.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

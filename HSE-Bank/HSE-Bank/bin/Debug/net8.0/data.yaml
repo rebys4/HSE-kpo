@@ -1,0 +1,23 @@
+- id: ea92de27-37b7-46df-a4f7-edb396fd2bba
+  name: Основной счет
+  balance: 5800
+- id: 367d3863-b76a-487f-90e0-ccb7cf4a3d51
+  name: Зарплата
+  type: Income
+- id: d91f6769-ff91-4923-abda-901e661ad7df
+  name: Кафе
+  type: Expense
+- id: d125e694-7f07-4c98-bb29-451a43e3b0ea
+  type: Income
+  bankAccountId: ea92de27-37b7-46df-a4f7-edb396fd2bba
+  amount: 5000
+  date: 2025-03-18T19:14:19.8812810+03:00
+  description: Зачисление зарплаты
+  categoryId: 367d3863-b76a-487f-90e0-ccb7cf4a3d51
+- id: 637c6e09-0beb-4eb1-b900-a17b6a194147
+  type: Expense
+  bankAccountId: ea92de27-37b7-46df-a4f7-edb396fd2bba
+  amount: 200
+  date: 2025-03-18T19:14:19.9020740+03:00
+  description: Посещение кафе
+  categoryId: d91f6769-ff91-4923-abda-901e661ad7df

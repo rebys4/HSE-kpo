@@ -1,0 +1,6 @@
+Type,Id,Name,Balance,OperationType,BankAccountId,Amount,Date,CategoryId,Description
+BankAccount,ea92de27-37b7-46df-a4f7-edb396fd2bba,Основной счет,5800,,,,,
+Category,367d3863-b76a-487f-90e0-ccb7cf4a3d51,Income,Зарплата,,,,,
+Category,d91f6769-ff91-4923-abda-901e661ad7df,Expense,Кафе,,,,,
+Operation,d125e694-7f07-4c98-bb29-451a43e3b0ea,,0,ea92de27-37b7-46df-a4f7-edb396fd2bba,5000,18.03.2025 19:14:19,367d3863-b76a-487f-90e0-ccb7cf4a3d51,Зачисление зарплаты
+Operation,637c6e09-0beb-4eb1-b900-a17b6a194147,,0,ea92de27-37b7-46df-a4f7-edb396fd2bba,200,18.03.2025 19:14:19,d91f6769-ff91-4923-abda-901e661ad7df,Посещение кафе

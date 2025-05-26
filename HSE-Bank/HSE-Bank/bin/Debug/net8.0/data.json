@@ -1,0 +1,35 @@
+[
+{
+  "Id": "ea92de27-37b7-46df-a4f7-edb396fd2bba",
+  "Name": "Основной счет",
+  "Balance": 5800.0
+}
+{
+  "Id": "367d3863-b76a-487f-90e0-ccb7cf4a3d51",
+  "Name": "Зарплата",
+  "Type": 0
+}
+{
+  "Id": "d91f6769-ff91-4923-abda-901e661ad7df",
+  "Name": "Кафе",
+  "Type": 1
+}
+{
+  "Id": "d125e694-7f07-4c98-bb29-451a43e3b0ea",
+  "Type": 0,
+  "BankAccountId": "ea92de27-37b7-46df-a4f7-edb396fd2bba",
+  "Amount": 5000.0,
+  "Date": "2025-03-18T19:14:19.881281+03:00",
+  "Description": "Зачисление зарплаты",
+  "CategoryId": "367d3863-b76a-487f-90e0-ccb7cf4a3d51"
+}
+{
+  "Id": "637c6e09-0beb-4eb1-b900-a17b6a194147",
+  "Type": 1,
+  "BankAccountId": "ea92de27-37b7-46df-a4f7-edb396fd2bba",
+  "Amount": 200.0,
+  "Date": "2025-03-18T19:14:19.902074+03:00",
+  "Description": "Посещение кафе",
+  "CategoryId": "d91f6769-ff91-4923-abda-901e661ad7df"
+}
+]
