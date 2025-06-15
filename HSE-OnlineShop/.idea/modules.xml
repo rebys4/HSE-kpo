@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/HSE-OnlineShop.iml" filepath="$PROJECT_DIR$/HSE-OnlineShop.iml" />
       <module fileurl="file://$PROJECT_DIR$/frontend/frontend.iml" filepath="$PROJECT_DIR$/frontend/frontend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Backend/orders-service/orders-service.iml" filepath="$PROJECT_DIR$/Backend/orders-service/orders-service.iml" />
     </modules>
   </component>
 </project>

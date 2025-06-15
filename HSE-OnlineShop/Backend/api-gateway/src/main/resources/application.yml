@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      default-filters:
+        - AddResponseHeader=X-Gateway, HSE-OnlineShop-Gateway
+      routes:
+        - id: orders-service
+          uri: http://orders-service:8083
+          predicates:
+            - Path=/api/orders/**, /api/swagger-ui/**, /api/v3/api-docs/orders/**
+          filters:
+            - StripPrefix=1
+
+        - id: payments-service
+          uri: http://payments-service:8082
+          predicates:
+            - Path=/api/payments/**, /api/v3/api-docs/payments/**, /api/swagger-ui/**
+          filters:
+            - StripPrefix=1
