@@ -8,7 +8,7 @@ import ru.hse.paymentsservice.entity.Payment;
 import ru.hse.paymentsservice.service.PaymentService;
 
 @RestController
-@RequestMapping("/api/payments")
+@RequestMapping("/payments")
 @RequiredArgsConstructor
 public class PaymentController {
     private final PaymentService paymentService;

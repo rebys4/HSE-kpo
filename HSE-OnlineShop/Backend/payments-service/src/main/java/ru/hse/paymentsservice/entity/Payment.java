@@ -22,7 +22,7 @@ public class Payment {
     private Double amount;
 
     @Enumerated(EnumType.STRING)
-    private String status;
+    private Status status;
 
     private LocalDateTime createdAt = LocalDateTime.now();
 

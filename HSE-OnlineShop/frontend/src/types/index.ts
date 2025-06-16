@@ -1,7 +1,8 @@
 export interface Order {
     id?: number;
-    customerName: string;
+    userId: number;
     amount: number;
+    description: string;
     status?: string;
 }
 
@@ -11,7 +12,7 @@ export interface OrderTableProps {
 }
 
 export interface Payment {
-    id: number;
+    id?: number;
     orderId: number;
     amount: number;
     status: string;

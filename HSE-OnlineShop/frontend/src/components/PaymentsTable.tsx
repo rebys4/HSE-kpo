@@ -10,11 +10,6 @@ const columns: ColumnsType<Payment> = [
         key: "id",
     },
     {
-        title: "ID заказа",
-        dataIndex: "orderId",
-        key: "orderId",
-    },
-    {
         title: "Сумма",
         dataIndex: "amount",
         key: "amount",

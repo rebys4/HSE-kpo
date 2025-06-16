@@ -13,9 +13,9 @@ const OrdersPage: React.FC = () => {
 
     useEffect(() => {
         setLoading(true);
-        // getOrders()
-        //     .then(setOrders)
-        //     .finally(() => setLoading(false));
+        getOrders()
+            .then(setOrders)
+            .finally(() => setLoading(false));
     }, []);
 
     return (

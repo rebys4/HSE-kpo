@@ -4,6 +4,7 @@ server:
 spring:
   application:
     name: api-gateway
+
   cloud:
     gateway:
       default-filters:
@@ -12,13 +13,13 @@ spring:
         - id: orders-service
           uri: http://orders-service:8083
           predicates:
-            - Path=/api/orders/**, /api/swagger-ui/**, /api/v3/api-docs/orders/**
+            - Path=/api/orders/**, /api/orders/swagger-ui/**, /api/orders/v3/api-docs/**
           filters:
             - StripPrefix=1
 
         - id: payments-service
           uri: http://payments-service:8082
           predicates:
-            - Path=/api/payments/**, /api/v3/api-docs/payments/**, /api/swagger-ui/**
+            - Path=/api/payments/**, /api/payments/swagger-ui/**, /api/payments/v3/api-docs/**
           filters:
             - StripPrefix=1

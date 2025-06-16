@@ -11,34 +11,29 @@ const columns: ColumnsType<Order> = [
         key: "id",
     },
     {
-        title: "Покупатель",
-        dataIndex: "customerName",
-        key: "customerName",
+        title: "userID",
+        dataIndex: "userId",
+        key: "userId",
     },
     {
-        title: "Товар",
-        dataIndex: "product",
-        key: "product",
+        title: "Описание",
+        dataIndex: "description",
+        key: "description",
     },
     {
         title: "Кол-во",
-        dataIndex: "quantity",
-        key: "quantity",
+        dataIndex: "amount",
+        key: "amount",
     },
     {
         title: "Статус",
         dataIndex: "status",
         key: "status",
     },
-    {
-        title: "Создан",
-        dataIndex: "createdAt",
-        key: "createdAt",
-        render: (date: string) => new Date(date).toLocaleString(),
-    },
 ];
 
 const OrderTable: React.FC<OrderTableProps> = ({ orders, loading}) => {
+    console.log(orders);
     return (
         <Table
             dataSource={orders}

@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 import ru.hse.ordersservice.config.RabbitMQConfig;
 import ru.hse.ordersservice.entity.OutboxEvent;
 import ru.hse.ordersservice.repository.OutboxEventRepository;
@@ -16,6 +17,7 @@ public class OutboxPublisher {
     private final OutboxEventRepository outboxEventRepository;
     private final RabbitTemplate rabbitTemplate;
 
+    @Transactional(readOnly = true)
     @Scheduled(fixedDelay = 2000)
     public void publishOutboxEvents() {
         List<OutboxEvent> events = outboxEventRepository.findAllByPublishedFalse();

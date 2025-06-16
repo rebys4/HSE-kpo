@@ -21,7 +21,7 @@ public class PaymentService {
         Payment payment = Payment.builder()
                 .orderId(String.valueOf(request.getOrderId()))
                 .amount(request.getAmount())
-                .status(String.valueOf(Payment.Status.SUCCESS))
+                .status(Payment.Status.SUCCESS)
                 .createdAt(LocalDateTime.now())
                 .build();
         paymentRepository.save(payment);

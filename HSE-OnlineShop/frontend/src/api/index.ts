@@ -36,17 +36,3 @@ export const fetchPayments = async (): Promise<Payment[]> => {
     const response = await api.get<Payment[]>("/payments");
     return response.data;
 };
-
-// Получить платежи по id заказа (если нужно)
-export const fetchPaymentsByOrder = async (orderId: number): Promise<Payment[]> => {
-    const response = await api.get<Payment[]>(`/payments/order/${orderId}`);
-    return response.data;
-};
-
-// Создать платеж (если нужно)
-export const createPayment = async (
-    payment: Omit<Payment, "id" | "status">
-): Promise<Payment> => {
-    const response = await api.post<Payment>("/payments", payment);
-    return response.data;
-};

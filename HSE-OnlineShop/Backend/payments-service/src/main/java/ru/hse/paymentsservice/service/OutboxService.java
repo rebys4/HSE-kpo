@@ -27,6 +27,7 @@ public class OutboxService {
         outboxRepository.save(event);
     }
 
+    @Transactional(readOnly = true)
     public List<OutboxEvent> findUnsent() {
         return outboxRepository.findAllBySentFalse();
     }
